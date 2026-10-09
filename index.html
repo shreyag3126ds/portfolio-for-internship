@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A portfolio showcasing six software development internship projects.">
+  <title>Internship Projects | Developer Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: rgba(20, 29, 53, .82);
+      --panel-border: rgba(164, 184, 230, .18);
+      --text: #f4f7ff;
+      --muted: #aab6d2;
+      --accent: #85a7ff;
+      --accent-2: #8ce6d0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(69, 98, 190, .28), transparent 38rem),
+        radial-gradient(ellipse at 100% 30%, rgba(38, 158, 144, .16), transparent 32rem),
+        var(--bg);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: 62px 0 34px; }
+    .eyebrow {
+      display: inline-flex; gap: 8px; align-items: center;
+      border: 1px solid var(--panel-border); background: rgba(255,255,255,.04);
+      color: var(--accent-2); padding: 8px 12px; border-radius: 999px;
+      font-size: .82rem; letter-spacing: .04em;
+    }
+    h1 { margin: 20px 0 12px; font-size: clamp(2.25rem, 6vw, 4.25rem); line-height: 1.04; letter-spacing: -.045em; }
+    .gradient { background: linear-gradient(90deg, #fff, #9cb8ff 55%, #8ce6d0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .intro { max-width: 680px; color: var(--muted); font-size: 1.08rem; line-height: 1.75; margin: 0; }
+    .toolbar { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin: 18px 0 22px; flex-wrap: wrap; }
+    .count { color: var(--muted); font-size: .94rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding-bottom: 56px; }
+    .card {
+      position: relative; overflow: hidden; display: flex; flex-direction: column;
+      min-height: 265px; padding: 23px; border-radius: 22px;
+      background: linear-gradient(145deg, rgba(27, 39, 69, .92), var(--panel));
+      border: 1px solid var(--panel-border); box-shadow: 0 18px 45px rgba(0,0,0,.16);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(133,167,255,.55); background: rgba(28,40,72,.96); }
+    .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .icon {
+      width: 48px; height: 48px; display: grid; place-items: center; flex-shrink: 0;
+      border-radius: 15px; background: rgba(133,167,255,.12); border: 1px solid rgba(133,167,255,.22);
+      font-size: 1.45rem;
+    }
+    .number { color: #7888ad; font-size: .82rem; font-weight: 700; letter-spacing: .12em; }
+    h2 { margin: 19px 0 8px; font-size: 1.23rem; letter-spacing: -.02em; }
+    .desc { margin: 0 0 20px; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; margin-bottom: 20px; }
+    .tag { font-size: .75rem; color: #c8d4f2; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.07); border-radius: 999px; padding: 5px 9px; }
+    .open {
+      display: inline-flex; align-items: center; justify-content: space-between; gap: 12px;
+      text-decoration: none; font-weight: 650; font-size: .92rem; color: #0a1428;
+      background: linear-gradient(90deg, #a9bdff, #9be9d7); padding: 11px 14px; border-radius: 12px;
+    }
+    .open:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+    footer { border-top: 1px solid var(--panel-border); padding: 22px 0 34px; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+    footer strong { color: var(--text); }
+    @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) {
+      header { padding-top: 42px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { min-height: 245px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow"><span>✦</span> SOFTWARE DEVELOPMENT PORTFOLIO</div>
+      <h1>Projects built to <span class="gradient">solve real problems.</span></h1>
+      <p class="intro">A collection of six internship and software projects. Choose a project below to open its deployed application.</p>
+    </header>
+
+    <div class="toolbar">
+      <div class="count">6 projects · Live deployment links</div>
+      <div class="count">Java · Spring Boot · Web Development</div>
+    </div>
+
+    <section class="grid" aria-label="Project portfolio">
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">✈️</div><div class="number">PROJECT 01</div></div>
+        <h2>Flight Tracker</h2>
+        <p class="desc">Track flight information through a web-based flight status application.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST API</span></div>
+        <a class="open" href="https://elevance-skills-internship-2.onrender.com/" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">⭐</div><div class="number">PROJECT 02</div></div>
+        <h2>Travel Review System</h2>
+        <p class="desc">A travel review application for exploring and managing feedback about travel experiences.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">JPA</span></div>
+        <a class="open" href="https://elevance-skills-internship-3.onrender.com" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">✨</div><div class="number">PROJECT 03</div></div>
+        <h2>Recommendation Feature</h2>
+        <p class="desc">A recommendation engine designed to suggest relevant travel options based on available data.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Recommendations</span><span class="tag">Web</span></div>
+        <a class="open" href="https://elevance-skills-internship-4.onrender.com/" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">↩️</div><div class="number">PROJECT 04</div></div>
+        <h2>Booking Refund</h2>
+        <p class="desc">A booking and refund management application for handling refund-related workflows.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">API</span></div>
+        <a class="open" href="https://elevance-skills-internship.onrender.com/" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">📈</div><div class="number">PROJECT 05</div></div>
+        <h2>Dynamic Pricing Engine</h2>
+        <p class="desc">A pricing engine that calculates and updates prices according to application rules.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Pricing Logic</span><span class="tag">Web</span></div>
+        <a class="open" href="https://elevance-skills-internship-1.onrender.com/" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="icon" aria-hidden="true">🍽️</div><div class="number">PROJECT 06</div></div>
+        <h2>Travel-review-System</h2>
+        <p class="desc">A travel review system for managing user-generated content and related workflows.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Database</span><span class="tag">Management System</span></div>
+        <a class="open" href="https://elevance-skills-internship-5.onrender.com/" target="_blank" rel="noopener noreferrer">Open project <span>↗</span></a>
+      </article>
+    </section>
+
+    <footer>
+      <strong>Project showcase</strong><br>
+      This page links to independently hosted project deployments. A project may take a little time to wake up, and its own application must be running for its link to work.
+    </footer>
+  </main>
+</body>
+</html>
